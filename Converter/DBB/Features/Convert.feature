@@ -5,7 +5,13 @@
 	
 
 Scenario: Convert from american measurment to Swedish
-	Given that I need an American cup
-	And the decimals are rounded to 1
-	When the amount of cups is 1
-	Then the Swedish amount is 2.4 dl
+	Given that I need <cup> American cups
+	And the decimals are rounded to <decimal>
+	When the amount of cups is <cup>
+	Then the Swedish amount is <dl> dl
+	Examples: 
+	| cup  | decimal | dl  |
+	| 1    | 1       | 2.4 |
+	| 2    | 1       | 4.8 |
+	| 0.5  | 0       | 1   |
+	| 0.25 | 1       | 0.6 |

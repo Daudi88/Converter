@@ -76,10 +76,17 @@ namespace DBB.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Convert from american measurment to Swedish")]
-        public virtual void ConvertFromAmericanMeasurmentToSwedish()
+        [NUnit.Framework.TestCaseAttribute("1", "1", "2.4", null)]
+        [NUnit.Framework.TestCaseAttribute("2", "1", "4.8", null)]
+        [NUnit.Framework.TestCaseAttribute("0.5", "0", "1", null)]
+        [NUnit.Framework.TestCaseAttribute("0.25", "1", "0.6", null)]
+        public virtual void ConvertFromAmericanMeasurmentToSwedish(string cup, string @decimal, string dl, string[] exampleTags)
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = exampleTags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("cup", cup);
+            argumentsOfScenario.Add("decimal", @decimal);
+            argumentsOfScenario.Add("dl", dl);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Convert from american measurment to Swedish", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 7
 this.ScenarioInitialize(scenarioInfo);
@@ -102,16 +109,16 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 8
- testRunner.Given("that I need an American cup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given(string.Format("that I need {0} American cups", cup), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 9
- testRunner.And("the decimals are rounded to 1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And(string.Format("the decimals are rounded to {0}", @decimal), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 10
- testRunner.When("the amount of cups is 1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("the amount of cups is {0}", cup), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 11
- testRunner.Then("the Swedish amount is 2.4 dl", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then(string.Format("the Swedish amount is {0} dl", dl), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
