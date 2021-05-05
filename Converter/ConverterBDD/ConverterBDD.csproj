@@ -12,4 +12,9 @@
     <ProjectReference Include="..\Converter\Converter.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Features\" />
+    <Folder Include="StepDefinitions\" />
+  </ItemGroup>
+
 </Project>
