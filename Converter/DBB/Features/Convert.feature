@@ -20,7 +20,6 @@ Scenario: Convert from american cup to Swedish dl
 Scenario: Convert from american measurment to Swedish
 	Given that I need <tablespoon> American tablespoons
 	And the decimals are rounded to <decimal>
-	When the amount of tabelspoons is <tablespoon>
 	Then the Swedish amount is <dl> dl
 	Examples: 
 	| tablespoon  | decimal | dl   |
