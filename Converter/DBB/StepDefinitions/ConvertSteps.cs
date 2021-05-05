@@ -1,7 +1,7 @@
 ﻿using System;
 using TechTalk.SpecFlow;
 
-namespace ConverterBDD.StepDefinitions
+namespace DBB.StepDefinitions
 {
     [Binding]
     public class ConvertSteps
