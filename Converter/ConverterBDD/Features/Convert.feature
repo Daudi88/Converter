@@ -1,9 +1,10 @@
-﻿Feature: Convert
-	Simple calculator for adding two numbers
+﻿Feature: As an amateur baker 
+I want to be able to convert from American measurements to Swedish
+so that I can know what I can use
+	
 
-@mytag
-Scenario: Add two numbers
-	Given the first number is 50
-	And the second number is 70
-	When the two numbers are added
-	Then the result should be 120
+Scenario: Convert from american measurment to Swedish
+	Given that I need an American cup
+	And the decimals are rounded to 1
+	When the amount of cups is 1
+	Then the Swedish amount is 2.4 dl
