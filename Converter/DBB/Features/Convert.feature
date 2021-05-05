@@ -15,3 +15,13 @@ Scenario: Convert from american measurment to Swedish
 	| 2    | 1       | 4.8 |
 	| 0.5  | 0       | 1   |
 	| 0.25 | 1       | 0.6 |
+
+
+Scenario: Convert from american measurment to Swedish
+	Given that I need <tablespoon> American tablespoons
+	And the decimals are rounded to <decimal>
+	When the amount of tabelspoons is <tablespoon>
+	Then the Swedish amount is <dl> dl
+	Examples: 
+	| tablespoon  | decimal | dl   |
+	| 1			  | 2       | 0.15 |
