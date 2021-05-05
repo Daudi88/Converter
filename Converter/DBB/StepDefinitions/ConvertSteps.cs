@@ -11,26 +11,20 @@ namespace DBB.StepDefinitions
         private double cup;
         private double dl;
         private int decimals;
-        private double tabelSpoon;
+        private double tableSpoon;
 
         [Given(@"that the decimals are rounded to (.*)")]
         public void GivenThatTheDecimalsAreRoundedTo(int p0)
-        [Given(@"that I need (.*) American cups?")]
-        public void GivenThatINeedAnAmericanCup(double p0)
-        {
-            cup = p0;
-        }
-
-        [Given(@"that I need (.*) American tablespoons?")]
-        public void GivenThatINeedAnAmericanTablespoons(double p0)
-        {
-            tableSpoon = p0;
-        }
-
-        [Given(@"the decimals are rounded to (.*)")]
-        public void GivenTheDecimalsAreRoundedTo(int p0)
         {
             decimals = p0;
+        }
+
+        [When(@"the amount of tablespoons are (.*)")]
+        public void WhenTheAmountOfTablespoonsAre(double p0)
+        {
+            tableSpoon = p0;
+            dl = converter.ConvertTableSpoonToDl(tableSpoon);
+            dl = Math.Round(dl, decimals);
         }
 
         [When(@"the amount of cups are (.*)")]

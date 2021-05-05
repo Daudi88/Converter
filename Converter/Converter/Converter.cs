@@ -12,5 +12,10 @@
         {
             return cup * 2.4;
         }
+
+        public double ConvertTableSpoonToDl(double tablespoon)
+        {
+            return tablespoon * 0.147868;
+        }
     }
 }

@@ -17,9 +17,10 @@ Scenario: Convert from american cup to Swedish dl
 
 
 Scenario: Convert from american measurment to Swedish
-	Given that I need <tablespoon> American tablespoons
-	And the decimals are rounded to <decimal>
+	Given that the decimals are rounded to <decimal>
+	When the amount of tablespoons are <tablespoon>
 	Then the Swedish amount is <dl> dl
 	Examples: 
-	| tablespoon  | decimal | dl   |
-	| 1			  | 2       | 0.15 |
+	| tablespoon | decimal | dl   |
+	| 1          | 2       | 0.15 |
+	| 2          | 1       | 0.3  |

@@ -124,6 +124,7 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Convert from american measurment to Swedish")]
         [NUnit.Framework.TestCaseAttribute("1", "2", "0.15", null)]
+        [NUnit.Framework.TestCaseAttribute("2", "1", "0.3", null)]
         public virtual void ConvertFromAmericanMeasurmentToSwedish(string tablespoon, string @decimal, string dl, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;
@@ -156,7 +157,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given(string.Format("that the decimals are rounded to {0}", @decimal), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 21
- testRunner.When(string.Format("the amount of tabelspoons is {0}", tablespoon), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("the amount of tablespoons are {0}", tablespoon), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 22
  testRunner.Then(string.Format("the Swedish amount is {0} dl", dl), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
