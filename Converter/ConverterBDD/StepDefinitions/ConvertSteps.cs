@@ -4,7 +4,7 @@ using TechTalk.SpecFlow;
 namespace ConverterBDD.StepDefinitions
 {
     [Binding]
-    public class Convert
+    public class ConvertSteps
     {
         [Given(@"that I need an American cup")]
         public void GivenThatINeedAnAmericanCup()
