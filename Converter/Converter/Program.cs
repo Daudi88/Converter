@@ -15,6 +15,8 @@
             // Daudi was here!
             // Jerry was here
             // Marcus was here!
+
+            // funkar detta?
         }
     }
 }
