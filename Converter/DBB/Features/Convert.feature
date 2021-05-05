@@ -5,9 +5,8 @@
 	
 
 Scenario: Convert from american cup to Swedish dl
-	Given that I need <cup> American cups
-	And the decimals are rounded to <decimal>
-	When the amount of cups is <cup>
+	Given that the decimals are rounded to <decimal>
+	When the amount of cups are <cup>
 	Then the Swedish amount is <dl> dl
 	Examples: 
 	| cup  | decimal | dl  |

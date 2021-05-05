@@ -13,6 +13,8 @@ namespace DBB.StepDefinitions
         private int decimals;
         private double tabelSpoon;
 
+        [Given(@"that the decimals are rounded to (.*)")]
+        public void GivenThatTheDecimalsAreRoundedTo(int p0)
         [Given(@"that I need (.*) American cups?")]
         public void GivenThatINeedAnAmericanCup(double p0)
         {
@@ -31,8 +33,8 @@ namespace DBB.StepDefinitions
             decimals = p0;
         }
 
-        [When(@"the amount of cups is (.*)")]
-        public void WhenTheAmountOfCupsIs(double p0)
+        [When(@"the amount of cups are (.*)")]
+        public void WhenTheAmountOfCupsAre(double p0)
         {
             cup = p0;
             dl = converter.ConvertCupToDl(cup);
