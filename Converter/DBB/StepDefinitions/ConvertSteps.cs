@@ -13,9 +13,9 @@ namespace DBB.StepDefinitions
         private int decimals;
 
         [Given(@"that I need (.*) American cups?")]
-        public void GivenThatINeedAnAmericanCup(double cup)
+        public void GivenThatINeedAnAmericanCup(double p0)
         {
-            cup = 1;
+            cup = p0;
         }
 
         [Given(@"the decimals are rounded to (.*)")]
