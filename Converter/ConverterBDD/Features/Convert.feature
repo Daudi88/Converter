@@ -1,6 +1,7 @@
-﻿Feature: As an amateur baker 
-I want to be able to convert from American measurements to Swedish
-so that I can know what I can use
+﻿Feature: Convert
+	As an amateur baker 
+	I want to be able to convert from American measurements to Swedish
+	so that I can know what I can use
 	
 
 Scenario: Convert from american measurment to Swedish
