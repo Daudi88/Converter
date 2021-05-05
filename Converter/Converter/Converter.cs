@@ -8,7 +8,7 @@
 
     public class Converter
     {
-        public double Convert(double cup)
+        public double ConvertCupToDl(double cup)
         {
             return cup * 2.4;
         }

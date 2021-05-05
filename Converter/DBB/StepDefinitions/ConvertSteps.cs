@@ -13,9 +13,9 @@ namespace DBB.StepDefinitions
         private int decimals;
 
         [Given(@"that I need (.*) American cups?")]
-        public void GivenThatINeedAnAmericanCup(double cup)
+        public void GivenThatINeedAnAmericanCup(double p0)
         {
-            cup = 1;
+            cup = p0;
         }
 
         [Given(@"the decimals are rounded to (.*)")]
@@ -28,7 +28,7 @@ namespace DBB.StepDefinitions
         public void WhenTheAmountOfCupsIs(double p0)
         {
             cup = p0;
-            dl = converter.Convert(cup);
+            dl = converter.ConvertCupToDl(cup);
             dl = Math.Round(dl, decimals);
         }
 

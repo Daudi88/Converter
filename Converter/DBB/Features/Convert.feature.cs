@@ -75,19 +75,19 @@ namespace DBB.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Convert from american measurment to Swedish")]
+        [NUnit.Framework.DescriptionAttribute("Convert from american cup to Swedish dl")]
         [NUnit.Framework.TestCaseAttribute("1", "1", "2.4", null)]
         [NUnit.Framework.TestCaseAttribute("2", "1", "4.8", null)]
         [NUnit.Framework.TestCaseAttribute("0.5", "0", "1", null)]
         [NUnit.Framework.TestCaseAttribute("0.25", "1", "0.6", null)]
-        public virtual void ConvertFromAmericanMeasurmentToSwedish(string cup, string @decimal, string dl, string[] exampleTags)
+        public virtual void ConvertFromAmericanCupToSwedishDl(string cup, string @decimal, string dl, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("cup", cup);
             argumentsOfScenario.Add("decimal", @decimal);
             argumentsOfScenario.Add("dl", dl);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Convert from american measurment to Swedish", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Convert from american cup to Swedish dl", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 7
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
