@@ -4,7 +4,7 @@
 	so that I can know what I can use
 	
 
-Scenario: Convert from american measurment to Swedish
+Scenario: Convert from american cup to Swedish dl
 	Given that I need <cup> American cups
 	And the decimals are rounded to <decimal>
 	When the amount of cups is <cup>

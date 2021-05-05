@@ -28,7 +28,7 @@ namespace DBB.StepDefinitions
         public void WhenTheAmountOfCupsIs(double p0)
         {
             cup = p0;
-            dl = converter.Convert(cup);
+            dl = converter.ConvertCupToDl(cup);
             dl = Math.Round(dl, decimals);
         }
 
